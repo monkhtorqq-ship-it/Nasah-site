@@ -1,6 +1,12 @@
+<<<<<<< Updated upstream
   import Image from "next/image";
   import Header from "./components/Header";
   import Hero from "./components/Hero";
+=======
+import Image from "next/image";
+import Header from "./components/Header";
+import Hero from "./components/Main";
+>>>>>>> Stashed changes
 
   export default function Home() {
     return (

@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { Rocket, Search, Menu, X } from 'lucide-react';
+import SearchBar from './SearchBar';
+import Link from 'next/link';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -14,11 +16,10 @@ const Header = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 w-full z-[100] transition-all duration-500 ${
-      scrolled ? 'bg-black/60 backdrop-blur-xl border-b border-white/10 py-4' : 'bg-transparent py-6'
-    }`}>
+    <nav className={`fixed top-0 w-full z-[100] transition-all duration-500 ${scrolled ? 'bg-black/60 backdrop-blur-xl border-b border-white/10 py-4' : 'bg-transparent py-6'
+      }`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        
+
         {/* Logo */}
         <div className="flex items-center gap-3 group cursor-pointer">
           <div className="relative">
@@ -35,7 +36,7 @@ const Header = () => {
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-10">
           {['Missions', 'Technology', 'Science', 'About'].map((item) => (
-            <a 
+            <a
               key={item}
               href={`#${item.toLowerCase()}`}
               className="text-[10px] font-bold tracking-[0.3em] text-gray-400 hover:text-white transition-colors uppercase relative group"
@@ -46,12 +47,9 @@ const Header = () => {
           ))}
         </div>
 
-        {/* Actions */}
         <div className="hidden md:flex items-center gap-6">
-          <Search className="w-5 h-5 text-gray-400 cursor-pointer hover:text-white transition-colors" />
-          <button className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-[10px] font-black tracking-widest uppercase transition-all rounded-sm">
-            Launch Menu
-          </button>
+          <SearchBar />
+          
         </div>
 
         {/* Mobile Toggle */}
@@ -61,9 +59,8 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu Content */}
-      <div className={`absolute top-full left-0 w-full bg-black/95 backdrop-blur-2xl border-b border-blue-500/20 md:hidden transition-all duration-300 overflow-hidden ${
-        isOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
-      }`}>
+      <div className={`absolute top-full left-0 w-full bg-black/95 backdrop-blur-2xl border-b border-blue-500/20 md:hidden transition-all duration-300 overflow-hidden ${isOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
+        }`}>
         <div className="flex flex-col p-8 gap-6">
           {['Missions', 'Technology', 'Science', 'About'].map((item) => (
             <a key={item} href="#" className="text-xs font-bold tracking-widest text-gray-300 uppercase hover:text-blue-500">

@@ -3,7 +3,6 @@
   import React from 'react';
   import { ChevronDown } from 'lucide-react';
 
-<<<<<<< Updated upstream:app/components/Hero.tsx
   const Hero = () => {
     return (
       <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
@@ -12,26 +11,6 @@
           {/* Анимэйшн бүхий мананцар (Nebula) эффект */}
           <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] animate-pulse"></div>
           <div className="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-indigo-900/20 rounded-full blur-[100px]"></div>
-=======
-const Hero = () => {
-  return (
-    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
-
-      {/* Background Layer */}
-      <div className="absolute inset-0 z-0 bg-black">
-
-        {/* Анимэйшн бүхий мананцар (Nebula) эффект */}
-        <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] animate-pulse"></div>
-        <div className="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-indigo-900/20 rounded-full blur-[100px]"></div>
-      </div>
-
-      {/* Main Content */}
-      <div className="relative z-10 text-center px-6 mt-20">
-        <div className="inline-block px-4 py-1 border border-blue-500/30 rounded-full mb-6 bg-blue-500/5 backdrop-blur-sm">
-          <span className="text-[10px] text-blue-400 font-black tracking-[0.4em] uppercase italic">
-            Outer Space Explorations
-          </span>
->>>>>>> Stashed changes:app/components/Main.tsx
         </div>
 
         {/* Main Content */}

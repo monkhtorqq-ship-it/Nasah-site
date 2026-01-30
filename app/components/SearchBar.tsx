@@ -22,7 +22,7 @@ export default function SearchBar() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 onKeyDown={handleKeyPress}
-                placeholder="Search..."
+                placeholder="..."
                 className="px-3 py-1 rounded border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 text-xs"
             />
             <button

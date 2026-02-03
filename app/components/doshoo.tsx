@@ -6,7 +6,9 @@
                 <div className="container mx-auto px-6">
                     <div>
                         <div className="bg-gray-900 w-370 h-35">
-                                <img src="nasa-1-logo-svg-vector-1.svg" alt="nasaerxec" className="w-32 h-32 object-contain" />
+                            <a href="/">
+                            <img src="/nasa-1-logo-svg-vector.svg" alt="nasaerxec" className="w-32 h-32 object-contain" />
+                            </a>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                             <div>
@@ -56,9 +58,9 @@
                             ©{new Date().getFullYear()} tsal, toroo, orchlon. All rights reserved.
                         </p>
                         <div className="flex gap-6 text-xs uppercase tracking-widest">
-                            <span className="hover:text-white cursor-pointer">Twitter</span>
-                            <span className="hover:text-white cursor-pointer">Discord</span>
-                            <span className="hover:text-white cursor-pointer">Github</span>
+                            <a href="https://twitter.com" className="hover:text-white cursor-pointer">Twitter</a>
+                            <a href="https://discord.com" className="hover:text-white cursor-pointer">Discord</a>
+                            <a href="https://github.com" className="hover:text-white cursor-pointer">Github</a>
                         </div>
                     </div>
                 </div>

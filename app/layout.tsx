@@ -4,7 +4,6 @@
   import Footer from "./components/doshoo";
 import Header from "./components/Header";
 
-
   const geistSans = Geist({
     variable: "--font-geist-sans",
     subsets: ["latin"],

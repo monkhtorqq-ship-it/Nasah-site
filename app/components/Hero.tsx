@@ -26,10 +26,10 @@ const Hero = () => {
         </div>
         
         <h1 className="text-6xl md:text-[120px] font-black text-white leading-tight tracking-tighter mb-4 uppercase italic">
-          DEEP <span className="text-transparent bg-clip-text bg-gradient-to-t from-blue-700 via-blue-400 to-white">SPACE</span>
+          DEEP <span className="text-transparent bg-clip-text bg-linear-to-t from-blue-700 via-blue-400 to-white">SPACE</span>
         </h1>
         
-        <p className="max-w-xl mx-auto text-gray-400 text-xs md:text-sm leading-relaxed mb-10 tracking-[0.1em] uppercase opacity-80">
+        <p className="max-w-xl mx-auto text-gray-400 text-xs md:text-sm leading-relaxed mb-10 tracking-widest uppercase opacity-80">
           Хязгааргүй огторгуйн нууцыг хамтдаа нээн илрүүлж, 
           хүн төрөлхтний дараагийн алхмыг эндээс эхлүүлцгээе.
         </p>
@@ -61,7 +61,7 @@ const Hero = () => {
               Бидний эрхэм зорилго бол хүн төрөлхтнийг гараг хоорондын соёл иргэншил болгоход оршино. 
               Энэхүү видеоноос та бидний ирээдүйн төлөвлөгөө болон одоогийн ахиц дэвшлийг харах боломжтой.
             </p>
-            <div className="h-[1px] w-20 bg-blue-500"></div>
+            <div className="h-px w-20 bg-blue-500"></div>
           </div>
           <div className="w-full aspect-video rounded-lg overflow-hidden border border-white/10 shadow-2xl shadow-blue-500/10">
             <iframe 
@@ -73,7 +73,105 @@ const Hero = () => {
           </div>
         </div>
       </div>  
-      <div className="sticky bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white to-transparent"></div>
+      <div className="flex gap-8 justify-center bg-white pt-20 pb-20">
+        <div>
+  <div className="relative group overflow-hidden rounded-lg">
+    <a href="/missions">
+      <img 
+      src='/mission.png' 
+        className="w-75 h-115 object-cover object-top" 
+        alt="infrometion about sun" 
+      />
+        <div className="absolute inset-0 flex items-end justify-center bg-black/30">
+        <h2 className="text-blue-500 font-bold text-xl drop-shadow-md">
+          Missions
+        </h2>
+      </div>
+      </a>
+    </div>
+  </div>
+  <div>
+  <div className="relative group overflow-hidden rounded-lg">
+    <a href="/missions/technology">
+      <img 
+      src='/sience.jpg' 
+        className="w-75 h-115 object-cover object-top" 
+        alt="infrometion about sun" 
+      />
+      <div className="absolute inset-0 flex items-end justify-center bg-black/30">
+        <h2 className="text-blue-500 font-bold text-xl drop-shadow-md">
+          Technology
+        </h2>
+      </div>
+    </a>
+    </div>
+  </div>
+  <div>
+  <div className="relative group overflow-hidden rounded-lg">
+    <a href="/missions/science">
+      <img 
+      src='/technolegy.jpg' 
+        className="w-75 h-115 object-cover object-top" 
+        alt="infrometion about sun" 
+      />
+      <div className="absolute inset-0 flex items-end justify-center bg-black/30">
+        <h2 className="text-blue-500 font-bold text-xl drop-shadow-md">
+          Sience
+        </h2>
+      </div>
+    </a>
+    </div>
+  </div>
+  <div>
+  <div className="relative group overflow-hidden rounded-lg">
+    <a href="/missions/about">
+      <img 
+      src='/sun.webp' 
+        className="w-75 h-115 object-cover object-top" 
+        alt="infrometion about sun" 
+      />
+      <div className="absolute inset-0 flex items-end justify-center bg-black/30">
+        <h2 className="text-blue-500 font-bold text-xl drop-shadow-md">
+          About
+        </h2> 
+      </div>
+    </a>
+    </div>
+  </div>
+  
+        {/* <div>
+          <img className='w-75 h-115 object-cover object-top' src="/sun.webp" alt="sun" />
+        </div>
+        <div>
+          <img className='w-75 h-115 object-cover object-top' src="/mission.png" alt="mission" />
+        </div>
+        <div>
+          <img className='w-75 h-115 object-cover object-top' src="/sience.jpg" alt="sience" />
+        </div>
+        <div>
+          <img className='w-75 h-115 object-cover object-top' src="/technolegy.jpg" alt="techno" />
+        </div> */}
+      </div>
+      
+      <div className='relative w-full h-96 overflow-hidden mt-20 mb-20'>
+        <video 
+          src='video/video.mp4' 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+          className="w-full h-full object-cover"
+          />
+            <div className="absolute inset-0 flex flex-col items-start justify-center text-start ml-66">
+              <h1 className="text-blue-500 text-4xl font-bold drop-shadow-lg">
+              NasaErxec Success
+              </h1>
+              <p className='text-blue-500 text-lg mt-4 max-w-md drop-shadow-md' >
+                in NasaErxec, We been partnership with Nasa for like 50 years , We been working on and studying our way around world for like 50 years
+              </p>
+          </div>
+      </div>
+      <div className="sticky bottom-0 left-0 w-full h-px bg-linear-to-r from-transparent via-white to-transparent"></div>
     </section>
   );
 };
@@ -84,3 +182,7 @@ export default Hero;
 //https://www.youtube.com/watch?v=ydkQlJhodio not working link only for youtube video page
 //remove the watch?v= part and replace it with embed so the video is visible to directly
 //https://www.youtube.com/embed/GzWzo0AXmTg correct link for embeded video but for this it's works in our site
+
+///Users/PADA-1-5-12/Desktop/Nasah-site/public/solar.jpg
+///Users/PADA-1-5-12/Desktop/Nasah-site/public/video/video.mp4
+//video/video.mp4

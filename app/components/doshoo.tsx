@@ -2,10 +2,10 @@
 
     const Footer = () => { 
         return (
-            <footer className="w-full py-10 bg-gray-900 text-gray-400 mt-auto border-t border-gray-800">
+            <footer className="w-full py-10 bg-black text-gray-400 mt-auto border-t border-black">
                 <div className="container mx-auto px-6">
                     <div>
-                        <div className="bg-gray-900 w-370 h-35">
+                        <div className="bg-black w-370 h-35">
                             <a href="/">
                             <img src="/nasa-1-logo-svg-vector.svg" alt="nasaerxec" className="w-32 h-32 object-contain" />
                             </a>

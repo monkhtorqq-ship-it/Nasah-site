@@ -1,72 +1,79 @@
-    import React from "react";
+import React from "react";
 
-    const Footer = () => { 
-        return (
-            <footer className="w-full py-10 bg-black text-gray-400 mt-auto border-t border-black">
-                <div className="container mx-auto px-6">
-                    <div>
-                        <div className="bg-black w-370 h-35">
+const Footer = () => { 
+    return (
+        // mt-20 эсвэл mt-32 нэмж үндсэн контентоосоо холдууллаа
+        <footer className="w-full pt-16 pb-10 bg-black text-zinc-500 mt-32 border-t border-white/5">
+            <div className="container mx-auto px-6">
+                <div className="flex flex-col lg:flex-row gap-12 mb-16">
+                    
+                    {/* Зүүн тал: Лого болон Танилцуулга */}
+                    <div className="max-w-sm">
+                        <div className="mb-6">
                             <a href="/">
-                            <img src="/nasa-1-logo-svg-vector.svg" alt="nasaerxec" className="w-32 h-32 object-contain" />
+                                <img 
+                                    src="/nasa-1-logo-svg-vector.svg" 
+                                    alt="nasa-logo" 
+                                    className="w-16 h-16 object-contain brightness-90 hover:brightness-110 transition-all" 
+                                />
                             </a>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                            <div>
-                            <h3 className="text-xl font-bold text-white mb-4">National Aeronautics and Space Administration</h3>
-                            <p className="text-sm leading-relaxed">
-                                NASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.
-                            </p>
-                            <p className="mt-5 text-white font-bold">
-                                About NASA's Mission
-                            </p>
-                            <h3 className="mt-5 text-white font-bold">
-                                Join Us 
-                            </h3>
-                        </div>
-                        <div id ="contact">
-                            <h3 className="text-xl font-bold text-white mb-4">Stuffs</h3>
-                            <p className="mt-3 text-white font-bold">Home</p>
-                            <p className="mt-3 text-white font-bold">News & Events</p>
-                            <p className="mt-3 text-white font-bold">Multimedia</p>
-                            <p className="mt-3 text-white font-bold">NASA+</p>
-                            <p className="mt-3 text-white font-bold">About NASA's Mission</p>
-                        </div>
-                        <div id ="contact">
-                            <h3 className="text-xl font-bold text-white mb-4">Our solar Stuffs</h3>
-                            <p className="mt-3 text-white font-bold">Humans in Space</p>
-                            <p className="mt-3 text-white font-bold">Earth</p>
-                            <p className="mt-3 text-white font-bold">The Solar System</p>
-                            <p className="mt-3 text-white font-bold">The Universe</p>
-                            <p className="mt-3 text-white font-bold">Science</p>
-                        </div>
-                        <div id ="contact">
-                            <h3 className="text-xl font-bold text-white mb-4">Stuffs</h3>
-                            <p className="mt-3 text-white font-bold">Aeronautics</p>
-                            <p className="mt-3 text-white font-bold">Technology</p>
-                            <p className="mt-3 text-white font-bold">Learning Resources</p>
-                            <p className="mt-3 text-white font-bold">About NASA</p>
-                            <p className="mt-3 text-white font-bold">NASA en Español</p>
-                        </div>
-                        
-                        </div>
+                        <h3 className="text-sm font-bold text-zinc-100 mb-4 leading-tight">
+                            National Aeronautics and Space Administration
+                        </h3>
+                        <p className="text-xs leading-relaxed text-zinc-500">
+                            NASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.
+                        </p>
                     </div>
 
-                    <hr className="my-8 border-white" />
+                    {/* Баруун тал: Link-үүд (Grid ашиглан шахсан) */}
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-8 flex-1">
+                        <div>
+                            <h4 className="text-[10px] uppercase tracking-[2px] font-bold text-white mb-5 opacity-50">Discovery</h4>
+                            <ul className="space-y-3 text-xs font-medium">
+                                <li className="hover:text-white cursor-pointer transition-colors">Home</li>
+                                <li className="hover:text-white cursor-pointer transition-colors">News & Events</li>
+                                <li className="hover:text-white cursor-pointer transition-colors">Multimedia</li>
+                                <li className="hover:text-white cursor-pointer transition-colors">NASA+</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 className="text-[10px] uppercase tracking-[2px] font-bold text-white mb-5 opacity-50">Exploration</h4>
+                            <ul className="space-y-3 text-xs font-medium">
+                                <li className="hover:text-white cursor-pointer transition-colors">Humans in Space</li>
+                                <li className="hover:text-white cursor-pointer transition-colors">The Solar System</li>
+                                <li className="hover:text-white cursor-pointer transition-colors">The Universe</li>
+                                <li className="hover:text-white cursor-pointer transition-colors">Science</li>
+                            </ul>
+                        </div>
 
-                    <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-                        <p className="text-xs">
-                            ©{new Date().getFullYear()} tsal, toroo, orchlon. All rights reserved.
-                        </p>
-                        <div className="flex gap-6 text-xs uppercase tracking-widest">
-                            <a href="https://twitter.com" className="hover:text-white cursor-pointer">Twitter</a>
-                            <a href="https://discord.com" className="hover:text-white cursor-pointer">Discord</a>
-                            <a href="https://github.com" className="hover:text-white cursor-pointer">Github</a>
+                        <div>
+                            <h4 className="text-[10px] uppercase tracking-[2px] font-bold text-white mb-5 opacity-50">Resources</h4>
+                            <ul className="space-y-3 text-xs font-medium">
+                                <li className="hover:text-white cursor-pointer transition-colors">Aeronautics</li>
+                                <li className="hover:text-white cursor-pointer transition-colors">Technology</li>
+                                <li className="hover:text-white cursor-pointer transition-colors">Learning Resources</li>
+                                <li className="hover:text-white cursor-pointer transition-colors">NASA en Español</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </footer>
-        );
-    };
 
-    export default Footer;
-    
+                {/* Доод хэсэг: Line болон Copyright */}
+                <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <p className="text-[10px] font-mono tracking-wider opacity-40">
+                        ©{new Date().getFullYear()} TSAL, TOROO, ORCHLON. ALL RIGHTS RESERVED.
+                    </p>
+                    <div className="flex gap-8 text-[10px] uppercase tracking-[3px]">
+                        <a href="#" className="hover:text-blue-500 transition-colors">Twitter</a>
+                        <a href="#" className="hover:text-indigo-500 transition-colors">Discord</a>
+                        <a href="#" className="hover:text-white transition-colors">Github</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    );
+};
+
+export default Footer;

@@ -51,7 +51,7 @@
             </div>
 
             <div className="gap-8 flex items-center cursor-pointer hover:text-white text-gray-400 transition-colors">
-                <a href="/missions/about">About</a>
+                <a href="/missions/search">Search planet</a>
             </div>
             </div>
 

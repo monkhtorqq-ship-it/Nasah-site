@@ -40,7 +40,7 @@
 
             <div className="hidden md:flex items-center gap-10">
             <div className="gap-8 flex :hidden md:flex items-center cursor-pointer hover:text-white text-gray-400 transition-colors ">
-                <a href="/missions">Mission</a>
+                <a href="/missions"></a>
             </div>
             <div className="gap-8 flex items-center cursor-pointer hover:text-white text-gray-400 transition-colors">
                 <a href="/missions/technology">Technology</a>

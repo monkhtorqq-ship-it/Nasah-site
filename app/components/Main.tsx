@@ -6,14 +6,14 @@
   const Hero = () => {
     return (
       <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
-        {/* Background Layer */}
+      
         <div className="absolute inset-0 z-0 bg-black">
-          {/* Анимэйшн бүхий мананцар (Nebula) эффект */}
+
           <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] animate-pulse"></div>
           <div className="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-indigo-900/20 rounded-full blur-[100px]"></div>
         </div>
 
-        {/* Main Content */}
+
         <div className="relative z-10 text-center px-6 mt-20">
           <div className="inline-block px-4 py-1 border border-blue-500/30 rounded-full mb-6 bg-blue-500/5 backdrop-blur-sm">
             <span className="text-[10px] text-blue-400 font-black tracking-[0.4em] uppercase italic">
@@ -40,13 +40,13 @@
           </div>
         </div>
 
-        {/* Bottom Detail */}
+ 
         <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3">
           <span className="text-[10px] text-gray-500 tracking-[0.3em] uppercase">Scroll to Discover</span>
           <ChevronDown className="text-blue-500 animate-bounce w-5 h-5" />
         </div>
 
-        {/* NASA Style Grid Line */}
+  
         <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
       </section>
     );

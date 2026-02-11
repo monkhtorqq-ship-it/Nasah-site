@@ -7,7 +7,7 @@
     number = 20,
     className,
     }: {
-    number?: number;
+    number?: number;    
     className?: string;
     }) => {
     // 1. Add state to hold the styles after the component mounts

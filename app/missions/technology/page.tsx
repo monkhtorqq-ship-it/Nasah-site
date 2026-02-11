@@ -1,4 +1,4 @@
-"use client";
+    "use client";
 
 import React, { useState, useEffect } from 'react';
 import { ArrowLeft, Binary, Loader2 } from 'lucide-react';
@@ -112,7 +112,6 @@ export default function TechnologyVisualPage() {
                          ))}
                       </div>
                     </div>
-                  </div>
                 </div>
 
                 {/* Scanline Animation */}
@@ -128,16 +127,14 @@ export default function TechnologyVisualPage() {
               <div className="w-3 h-3 bg-blue-600 animate-ping rounded-full"></div>
               <span className="text-[10px] uppercase tracking-[0.5em]">System Uplink Active...</span>
             </div>
-            <p className="text-[9px] uppercase tracking-widest">© 2026 NASA Innovation Lab / Engineering Archive</p>
         </div>
-      </div>
 
-      <style jsx>{`
-        @keyframes scan {
-          from { transform: translateY(-100%); }
-          to { transform: translateY(400%); }
-        }
-      `}</style>
-    </div>
-  );
-}
+        <style jsx>{`
+            @keyframes scan {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(400%); }
+            }
+        `}</style>
+        </div>
+    );
+    }

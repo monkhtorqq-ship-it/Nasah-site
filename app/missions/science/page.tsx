@@ -1,4 +1,4 @@
-"use client";
+    "use client";
 
 import React, { useState, useEffect } from 'react';
 import { ArrowLeft, Beaker, Atom, Orbit, Sparkles, Microscope, AlertTriangle } from 'lucide-react';
@@ -33,11 +33,11 @@ export default function SciencePage() {
       });
   }, []);
 
-  const scienceSectors = [
-    { title: "Astrophysics", icon: <Atom size={20} />, desc: "Орчлон ертөнцийн үүсэл, хар нүх, цаг хугацааны судалгаа." },
-    { title: "Exoplanets", icon: <Orbit size={20} />, desc: "Нарны аймгаас гадна орших амьдрал байж болох гарагуудын эрэл." },
-    { title: "Heliophysics", icon: <Sparkles size={20} />, desc: "Нарны идэвхжил болон түүний дэлхийд үзүүлэх нөлөө." }
-  ];
+    const scienceSectors = [
+        { title: "Astrophysics", icon: <Atom size={20} />, desc: "Орчлон ертөнцийн үүсэл, хар нүх, цаг хугацааны судалгаа." },
+        { title: "Exoplanets", icon: <Orbit size={20} />, desc: "Нарны аймгаас гадна орших амьдрал байж болох гарагуудын эрэл." },
+        { title: "Heliophysics", icon: <Sparkles size={20} />, desc: "Нарны идэвхжил болон түүний дэлхийд үзүүлэх нөлөө." }
+    ];
 
   return (
     <div className="min-h-screen bg-[#050505] text-white font-sans overflow-x-hidden selection:bg-purple-500 selection:text-white">
@@ -119,7 +119,7 @@ export default function SciencePage() {
                     <span className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover/btn:opacity-100 group-hover/btn:text-black transition-all">→</span>
                   </button>
                 </div>
-              </div>
+            ))}
             </div>
           )}
         </section>
@@ -142,28 +142,14 @@ export default function SciencePage() {
               {/* Decorative Corner */}
               <div className="absolute top-0 right-0 w-8 h-8 border-t border-r border-white/10 group-hover:border-white transition-colors"></div>
             </div>
-          ))}
         </div>
 
-        {/* TICKER */}
-        <div className="mt-32 py-8 border-y border-white/5 overflow-hidden whitespace-nowrap bg-purple-900/5 relative">
-           <div className="ticker-content inline-block text-[10px] font-mono uppercase tracking-[0.6em] text-purple-400/40 font-bold">
-             DETECTION: Gravitational Waves +++ SPECTRUM: Gamma Ray Burst 04.22 +++ HUBBLE CONSTANT: 73.3 KM/S/MPC +++ DARK MATTER RATIO: 26.8% +++ NASA_DATA_STREAM: CONNECTED +++ 
-             DETECTION: Gravitational Waves +++ SPECTRUM: Gamma Ray Burst 04.22 +++ HUBBLE CONSTANT: 73.3 KM/S/MPC +++ DARK MATTER RATIO: 26.8% +++ NASA_DATA_STREAM: CONNECTED +++
-           </div>
+        <style jsx>{`
+            @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+            }
+        `}</style>
         </div>
-      </div>
-
-      <style jsx>{`
-        .ticker-content {
-          display: inline-block;
-          animation: ticker 40s linear infinite;
-        }
-        @keyframes ticker {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-      `}</style>
-    </div>
-  );
-}
+    );
+    }

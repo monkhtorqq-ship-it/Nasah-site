@@ -2,12 +2,12 @@ import React from "react";
 
 const Footer = () => { 
     return (
-        // mt-20 эсвэл mt-32 нэмж үндсэн контентоосоо холдууллаа
+    
         <footer className="w-full pt-16 pb-10 bg-black text-zinc-500 mt-32 border-t border-white/5">
             <div className="container mx-auto px-6">
                 <div className="flex flex-col lg:flex-row gap-12 mb-16">
                     
-                    {/* Зүүн тал: Лого болон Танилцуулга */}
+            
                     <div className="max-w-sm">
                         <div className="mb-6">
                             <a href="/">
@@ -26,7 +26,6 @@ const Footer = () => {
                         </p>
                     </div>
 
-                    {/* Баруун тал: Link-үүд (Grid ашиглан шахсан) */}
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-8 flex-1">
                         <div>
                             <h4 className="text-[10px] uppercase tracking-[2px] font-bold text-white mb-5 opacity-50">Discovery</h4>
@@ -60,7 +59,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                {/* Доод хэсэг: Line болон Copyright */}
+        
                 <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
                     <p className="text-[10px] font-mono tracking-wider opacity-40">
                         ©{new Date().getFullYear()} TSAL, TOROO, ORCHLON. ALL RIGHTS RESERVED.

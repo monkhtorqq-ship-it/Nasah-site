@@ -57,7 +57,7 @@
     ];
 
     return (
-        <div className="min-h-screen bg-[#050505] text-white font-sans overflow-x-hidden selection:bg-purple-500 selection:text-white">
+        <div className="min-h-screen bg-transparent text-white font-sans overflow-x-hidden selection:bg-purple-500 selection:text-white">
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24 pb-20">
             {/* HEADER */}
             <div className="mb-20">

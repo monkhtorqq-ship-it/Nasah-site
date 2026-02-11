@@ -38,7 +38,7 @@
     }, []);
 
     return (
-        <div className="min-h-screen bg-[#020202] text-white font-sans selection:bg-blue-600">
+        <div className="min-h-screen bg-transparent text-white font-sans selection:bg-blue-600">
         {/* Background */}
         <div className="fixed inset-0 pointer-events-none opacity-20">
             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>

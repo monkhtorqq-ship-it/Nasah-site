@@ -41,7 +41,7 @@ export default function SearchPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#050505] text-white font-sans selection:bg-blue-600">
+    <div className="min-h-screen bg-transparent text-white font-sans selection:bg-blue-600">
       
      
       <div className="fixed inset-0 pointer-events-none">

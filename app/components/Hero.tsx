@@ -2,12 +2,17 @@
 import React, { useState } from 'react';
 import { ChevronDown, Globe, Zap, Shield, Rocket } from 'lucide-react';
 import Link from 'next/link';
+import dynamic from 'next/dynamic'; // Dynamic import-оо заавал дээр нь авна
 import { cn } from "@/lib/utils";
 import { GlareCard } from "@/components/ui/glare-card";
-import InfiniteUniverse from './InfiniteUniverse'; // Файлын замыг шалгаарай
+
+// SSR-ээс сэргийлж 3D компонентуудаа dynamic-оор дуудна
+const InfiniteUniverse = dynamic(() => import('./InfiniteUniverse'), { ssr: false });
+const BlackHoleUniverse = dynamic(() => import('./BlackHoleScene'), { ssr: false });
 
 const Hero = () => {
   const [showUniverse, setShowUniverse] = useState(false);
+  const [showBlackHole, setShowBlackHole] = useState(false); // State-ээ энд зөв байрлууллаа
   const [hovered, setHovered] = useState<number | null>(null);
 
   const stats = [
@@ -22,13 +27,14 @@ const Hero = () => {
     { title: "Технологи", src: "/sience.jpg", href: "/missions/technology", tag: "Шинэ шийдэл" },
     { title: "Шинжлэх ухаан", src: "/technolegy.jpg", href: "/missions/science", tag: "Судалгаа" },
     { title: "Бидний тухай", src: "/sun.webp", href: "/missions/about", tag: "Түүх" },
-    { title: "Дэлхий газар", src: "/earth.jpg", href: "#", tag: "Орбит" }, // Href-ийг # болгов
-    { title: "Хар нүхний түүх", src: "/black.jpg", href: "/missions/mars", tag: "Ирээдүй" }
+    { title: "Дэлхий газар", src: "/earth.jpg", href: "#", tag: "Орбит" }, 
+    { title: "Хар нүхний түүх", src: "/black.jpg", href: "#", tag: "Ирээдүй" } 
   ];
 
   return (
     <section className="relative min-h-screen w-full bg-transparent overflow-x-hidden font-sans">
-      {/* 3D OVERLAY - Энэ хэсэг нэмэгдсэн */}
+      
+      {/* 1. ДЭЛХИЙ OVERLAY */}
       {showUniverse && (
         <div className="fixed inset-0 z-[100] w-full h-full bg-black animate-in fade-in duration-700">
           <button 
@@ -43,13 +49,28 @@ const Hero = () => {
         </div>
       )}
 
+      {/* 2. ХАР НҮХ OVERLAY */}
+      {showBlackHole && (
+        <div className="fixed inset-0 z-[100] w-full h-full bg-[#020005] animate-in zoom-in duration-700">
+          <button 
+            onClick={() => setShowBlackHole(false)}
+            className="absolute top-10 right-10 z-[110] px-6 py-2 border border-orange-500/50 text-orange-500 font-bold text-[10px] tracking-[0.3em] uppercase backdrop-blur-md hover:bg-orange-500 hover:text-white transition-all"
+          >
+            ← ГАРАХ
+          </button>
+          <div className="w-full h-full">
+            <BlackHoleUniverse />
+          </div>
+        </div>
+      )}
+
       {/* BACKGROUND EFFECTS */}
       <div className="fixed inset-0 -z-10 pointer-events-none">
         <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[150px] animate-pulse"></div>
         <div className="absolute bottom-[10%] right-[-5%] w-[400px] h-[400px] bg-indigo-900/30 rounded-full blur-[120px]"></div>
       </div>
 
-      {/* HERO CONTENT (First Section) */}
+      {/* HERO CONTENT */}
       <div className="relative z-10 h-screen w-full flex flex-col items-center justify-center text-center px-6">
         <div className="inline-flex items-center gap-2 px-4 py-1 border border-blue-500/30 rounded-full mb-8 bg-blue-500/10 backdrop-blur-md">
           <div className="w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
@@ -83,12 +104,16 @@ const Hero = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
           {missions.map((card, index) => {
             const isEarth = card.title === "Дэлхий газар";
+            const isBlackHole = card.title === "Хар нүхний түүх";
             
             const CardContent = (
               <div 
                 onMouseEnter={() => setHovered(index)}
                 onMouseLeave={() => setHovered(null)}
-                onClick={() => isEarth && setShowUniverse(true)}
+                onClick={() => {
+                   if (isEarth) setShowUniverse(true);
+                   if (isBlackHole) setShowBlackHole(true);
+                }}
                 className={cn(
                   "cursor-pointer transition-all duration-500 ease-in-out",
                   hovered !== null && hovered !== index && "blur-[3px] scale-[0.96] opacity-30"
@@ -100,28 +125,25 @@ const Hero = () => {
                     <span className="px-2 py-1 text-[8px] bg-blue-600 text-white font-bold tracking-widest uppercase">{card.tag}</span>
                   </div>
                   <div className="relative z-20 w-full p-8 bg-gradient-to-t from-black via-black/20 to-transparent">
-                    <h2 className="text-blue-400 font-black text-2xl tracking-tighter italic uppercase drop-shadow-md">{card.title}</h2>
-                    <div className="w-10 h-px bg-blue-500 mt-2"></div>
+                    <h2 className={cn(
+                      "font-black text-2xl tracking-tighter italic uppercase drop-shadow-md",
+                      isBlackHole ? "text-orange-500" : "text-blue-400"
+                    )}>
+                      {card.title}
+                    </h2>
+                    <div className={cn("w-10 h-px mt-2", isBlackHole ? "bg-orange-500" : "bg-blue-500")}></div>
                   </div>
                 </GlareCard>
               </div>
             );
 
-            return isEarth ? (
-              <React.Fragment key={index}>{CardContent}</React.Fragment>
+            // Хэрэв Дэлхий эсвэл Хар нүх бол Link биш div ашиглана
+            return (isEarth || isBlackHole) ? (
+              <div key={index}>{CardContent}</div>
             ) : (
               <Link key={index} href={card.href}>{CardContent}</Link>
             );
           })}
-        </div>
-      </div>
-
-      {/* FOOTER VIDEO AREA */}
-      <div className='relative w-full h-[600px] overflow-hidden group mt-10'>
-        <video src='/video/video.mp4' autoPlay muted loop playsInline className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-10000 opacity-40" />
-        <div className="absolute inset-0 bg-black/40 backdrop-brightness-75"></div>
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-          <h1 className="text-white text-5xl md:text-7xl font-black italic uppercase tracking-tighter mb-6">ДЭЛХИЙН <span className="text-blue-500">ТҮНШЛЭЛ</span></h1>
         </div>
       </div>
     </section>

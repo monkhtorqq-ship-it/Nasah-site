@@ -18,7 +18,7 @@
         <nav
         className={`fixed top-0 w-full z-100 transition-all duration-500 ${
             scrolled
-            ? "bg-black/60 backdrop-blur-xl border-b border-white/10 py-4"
+            ? " border-white/10 py-4"
             : "bg-transparent py-6"
         }`}
         >

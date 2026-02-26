@@ -23,7 +23,7 @@ const Hero = () => {
   ];
 
   const missions = [
-    { title: "Төслүүд", src: "/mission.png", href: "/missions", tag: "Явагдаж буй" },
+    { title: "Төслүүд", src: "/mission.png", href: "/missions/about", tag: "Явагдаж буй" },
     { title: "Технологи", src: "/sience.jpg", href: "/missions/technology", tag: "Шинэ шийдэл" },
     { title: "Шинжлэх ухаан", src: "/technolegy.jpg", href: "/missions/science", tag: "Судалгаа" },
     { title: "Бидний тухай", src: "/sun.webp", href: "/missions/about", tag: "Түүх" },
@@ -94,6 +94,27 @@ const Hero = () => {
           </a>
         </div>
       </div>
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
+            <h2 className="text-3xl font-black text-white tracking-widest uppercase italic">Даалгаврын танилцуулга</h2>
+            <p className="text-gray-400 text-sm leading-relaxed tracking-wide">
+              Бидний эрхэм зорилго бол хүн төрөлхтнийг гараг хоорондын соёл иргэншил болгоход оршино. 
+              Энэхүү видеоноос та бидний ирээдүйн төлөвлөгөө болон одоогийн ахиц дэвшлийг харах боломжтой.
+            </p>
+            <div className="h-px w-20 bg-blue-500"></div>
+          </div>
+          <div className="w-full aspect-video rounded-lg overflow-hidden border border-white/10 shadow-2xl shadow-blue-500/10 bg-black">
+            <iframe 
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/GzWzo0AXmTg" 
+              title="Space Video"
+              allowFullScreen 
+            />
+          </div>
+        </div>
+      </div>
+
 
       {/* MISSIONS GRID */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 py-20">
@@ -111,8 +132,8 @@ const Hero = () => {
                 onMouseEnter={() => setHovered(index)}
                 onMouseLeave={() => setHovered(null)}
                 onClick={() => {
-                   if (isEarth) setShowUniverse(true);
-                   if (isBlackHole) setShowBlackHole(true);
+                    if (isEarth) setShowUniverse(true);
+                    if (isBlackHole) setShowBlackHole(true);
                 }}
                 className={cn(
                   "cursor-pointer transition-all duration-500 ease-in-out",
@@ -146,8 +167,18 @@ const Hero = () => {
           })}
         </div>
       </div>
+      {/* FOOTER VIDEO AREA */}
+      <div className='relative w-full h-150 overflow-hidden group mt-10'>
+        <video src='/video/video.mp4' autoPlay muted loop playsInline className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-10000 opacity-40" />
+        <div className="absolute inset-0 bg-black/40 backdrop-brightness-75"></div>
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+          <h1 className="text-white text-5xl md:text-7xl font-black italic uppercase tracking-tighter mb-6">ДЭЛХИЙН <span className="text-blue-500">ТҮНШЛЭЛ</span></h1>
+        </div>
+      </div>
     </section>
   );
 };
 
 export default Hero;
+
+///Users/PADA-1-5-12/Desktop/Nasah-site/app/missions/mission/page.tsx

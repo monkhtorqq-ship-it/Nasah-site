@@ -35,7 +35,7 @@ export default function MissionsPage() {
                         </Link>
                         <h1 className="text-6xl md:text-[100px] font-black italic uppercase tracking-tighter leading-[0.85]">
                             ENGINEERING <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-400">
+                            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-indigo-400">
                                 BLUEPRINTS
                             </span>
                         </h1>
@@ -64,7 +64,7 @@ export default function MissionsPage() {
                 {/* 3. MISSION TIMELINE */}
                 <div className="max-w-5xl mx-auto relative">
                     {/* Vertical Line */}
-                    <div className="absolute left-1/2 -translate-x-px h-full w-[1px] bg-gradient-to-b from-blue-600/50 via-zinc-800 to-transparent hidden md:block" />
+                    <div className="absolute left-1/2 -translate-x-px h-full w-px bg-linear-to-b from-blue-600/50 via-zinc-800 to-transparent hidden md:block" />
                     
                     <div className="space-y-24">
                         {missions.map((m, i) => (
@@ -73,7 +73,7 @@ export default function MissionsPage() {
                                 <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-black border border-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.6)] z-10 group-hover:scale-150 transition-transform duration-500" />
                                 
                                 <div className={cn(
-                                    "w-full md:w-[45%] p-1 bg-gradient-to-br from-white/10 to-transparent rounded-[2rem] transition-all duration-500",
+                                    "w-full md:w-[45%] p-1 bg-linear-to-br from-white/10 to-transparent rounded-[2rem] transition-all duration-500",
                                     i % 2 === 0 ? "md:mr-auto" : "md:ml-auto"
                                 )}>
                                     <div className="bg-zinc-950/90 p-8 rounded-[1.9rem] backdrop-blur-2xl relative overflow-hidden group-hover:bg-zinc-900/90 transition-colors h-full">

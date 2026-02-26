@@ -84,10 +84,7 @@ const Hero = () => {
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
           <Link href="/missions">
-            <button className="group relative w-full sm:w-auto px-12 py-5 bg-white text-black font-black text-[10px] tracking-[0.3em] uppercase transition-all duration-500 hover:bg-blue-600 hover:text-white rounded-none">
-              <span className="relative z-10">Аялалд гарах</span>
-              <div className="absolute inset-0 w-0 bg-blue-500 transition-all duration-500 group-hover:w-full"></div>
-            </button>
+            
           </Link>
           <a href="https://plus.nasa.gov" target="_blank" rel="noreferrer" className="w-full sm:w-auto px-12 py-5 border border-white/20 text-white font-black text-[10px] tracking-[0.3em] uppercase hover:border-blue-400 hover:bg-white/5 transition-all">
             Шуд дамжуулалт

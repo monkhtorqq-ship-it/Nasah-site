@@ -9,7 +9,6 @@ function DeepSpaceScene() {
   const cloudsRef = useRef<THREE.Mesh>(null!);
   const groupRef = useRef<THREE.Group>(null!);
 
-  // Текстур ачаалах - Хэрэв эдгээр линк ажиллахгүй бол өнгөөр орлуулна
   const [map, normal, spec, clouds, night] = useTexture([
     'https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/planets/earth_atmos_2048.jpg',
     'https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/planets/earth_normal_2048.jpg',

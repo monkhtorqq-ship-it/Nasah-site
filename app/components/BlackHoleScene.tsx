@@ -64,7 +64,7 @@ export default function BlackHoleUniverse() {
           <p className="text-gray-300 text-xl md:text-3xl font-light leading-relaxed italic max-w-3xl">
             "Орон зай, цаг хугацааны хязгаар энд дуусч, <br/>
             <span className="text-white font-bold not-italic border-l-4 border-orange-600 pl-4">
-               бүх зүйл нэг цэгт төвлөрнө.
+                бүх зүйл нэг цэгт төвлөрнө.
             </span>"
           </p>
         </motion.div>

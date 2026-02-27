@@ -29,7 +29,7 @@ function DeepSpaceScene() {
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} intensity={10} color="#ffffff" />
       <directionalLight position={[-5, 5, 5]} intensity={2} />
-     
+      
       <mesh ref={earthRef} position={[0, 0, 0]}>
         <sphereGeometry args={[2, 64, 64]} />
         <meshPhongMaterial 

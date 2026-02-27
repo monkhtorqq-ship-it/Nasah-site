@@ -43,7 +43,7 @@ export default function SearchPage() {
   return (
     <div className="min-h-screen bg-transparent text-white font-sans selection:bg-blue-600">
       
-     
+
       <div className="fixed inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/10 rounded-full blur-[120px]"></div>
       </div>
@@ -127,7 +127,6 @@ export default function SearchPage() {
                   </p>
 
                   <div className="mt-auto flex flex-wrap gap-2 pt-6 border-t border-white/5">
-             
                     {item.keywords?.slice(0, 3).map((kw: string, i: number) => (
                       <span key={i} className="text-[8px] text-zinc-500 bg-white/5 px-2 py-1 uppercase font-black tracking-tighter hover:text-white hover:bg-blue-600/20 transition-all cursor-default">
                         #{kw}
@@ -139,8 +138,8 @@ export default function SearchPage() {
             ))
           ) : hasSearched && (
             <div className="col-span-full py-40 text-center">
-               <Rocket className="mx-auto mb-6 text-zinc-800" size={48} />
-               <p className="text-xs text-zinc-600 font-bold uppercase tracking-[0.4em]">Sector Empty. Try another coordinate.</p>
+                <Rocket className="mx-auto mb-6 text-zinc-800" size={48} />
+                <p className="text-xs text-zinc-600 font-bold uppercase tracking-[0.4em]">Sector Empty. Try another coordinate.</p>
             </div>
           )}
         </div>

@@ -8,7 +8,6 @@ export default function SearchBar() {
     const handleSearch = () => {
         if (!query) return;
         alert(`Searching for: ${query}`);
-        // Энд хүсвэл API call эсвэл page redirect хийх боломжтой
     };
 
     const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {

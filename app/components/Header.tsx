@@ -92,11 +92,3 @@
     };
 
     export default Header;
-
-    ///Users/PADA-1-5-12/Desktop/Nasah-site/app/pages/missions/about/about.tsx
-    ///Users/PADA-1-5-12/Desktop/Nasah-site/app/pages/missions
-    ///Users/PADA-1-5-12/Desktop/Nasah-site/app/pages/missions/about/page.tsx
-    ///Users/PADA-1-5-12/Desktop/Nasah-site/app/pages/missions/technology/page.tsx
-    ///Users/PADA-1-5-12/Desktop/Nasah-site/app/components/doshoo.tsx
-    ///Users/PADA-1-5-12/Desktop/Nasah-site/app/components/Hero.tsx
-    ///Users/PADA-1-5-12/Desktop/Nasah-site/app/globals.css

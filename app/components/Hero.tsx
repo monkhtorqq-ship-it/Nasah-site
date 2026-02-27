@@ -177,5 +177,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-///Users/PADA-1-5-12/Desktop/Nasah-site/app/missions/mission/page.tsx

@@ -26,7 +26,7 @@ const Hero = () => {
     { title: "Төслүүд", src: "/mission.png", href: "/missions/about", tag: "Явагдаж буй" },
     { title: "Технологи", src: "/sience.jpg", href: "/missions/technology", tag: "Шинэ шийдэл" },
     { title: "Шинжлэх ухаан", src: "/technolegy.jpg", href: "/missions/science", tag: "Судалгаа" },
-    { title: "Бидний тухай", src: "/sun.webp", href: "/missions/about", tag: "Түүх" },
+    { title: "Бидний тухай", src: "/sun.webp", href: "/missions/About-us", tag: "Түүх" },
     { title: "Дэлхий газар", src: "/earth.jpg", href: "#", tag: "Орбит" }, 
     { title: "Хар нүхний түүх", src: "/pfp.jpg", href: "#", tag: "Ирээдүй" } 
   ];
